@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<h1>FIELDSET E LEGEND</h1><!--sempre tenho q acrescentar no form= enctype="multipart/form-data" quando for enviar algum arquivo com input type="file"-->
+ <form method="post" action="blablabla.php" enctype="multipart/form-data"  >
+    <input type=hidden"><!--campo escondido  -->
+    <fieldset> <!--fieldset - para agrupar elementos dentro do formulario-->
+        <legend>DADOS PESSOAIS</legend>
+    <label>Primeiro Nome:<br/>
+          <input type="text" name="name" required minlength="2"/>  </label><br>
+    <label>Sobrenome:<br/>
+          <input type="text" name="lastname" required />  </label><br>
+    <label>data da nascimento:<br/>
+            <input type="date" name="birthdate" required />  </label><br>
+    <label>E-mail:<br/>
+           <input type="email" name="email"  pattern="renan@gmail.com"   required />  </label><br>
+    <label>Foto:<br/><!-- type file = enviar arquivos-->
+        <!--accept="tipo do arquivos q tem q ser enviados ("image/* so img"-->
+        <!-- <input type="file" name="photo" accept="image/*" required />-->  </label><br><!--acxept="aplication/pdf" somente pdf-->
+            <input type="file" name="docs"  accept="aplication/pdf"> 
+    </fieldset>
+    <fieldset>
+        <legend>Dados PROFISSIONAIS</legend>
+    <label>Nome da Empresa:<br/>
+          <input type="text" name="companyname" required />  </label><br>
+    <label>Cargo na Empresa:<br/>
+         <input type="text" name="companyjobtitle" required/>  </label><br>
+    </fieldset>
+
+    <input type="submit" value="cadastrar"  />
+   
+ </form>
+<body>
+    
+</body>
+</html>
